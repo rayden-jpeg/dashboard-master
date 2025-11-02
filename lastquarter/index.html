@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Overview</title>
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    h2 {
+      font-weight: 600;
+      color: #343a40;
+    }
+    canvas {
+      max-width: 320px;
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Dashboard</a>
+  </header>
+
+  <main class="container mt-4">
+
+    <!-- 📊 CURRENT MONTH -->
+    <h2>📅 Current Month Summary (October 2025)</h2>
+    <div class="row g-4 mt-1">
+      <div class="col-md-4">
+        <div class="card text-center p-3">
+          <h6 class="text-muted">Total Sales</h6>
+          <h3 class="text-success fw-bold">Rp 124.500.000</h3>
+          <small class="text-muted">+15% from last month</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-3">
+          <h6 class="text-muted">New Customers</h6>
+          <h3 class="text-primary fw-bold">1,248</h3>
+          <small class="text-muted">+6% this month</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-center p-3">
+          <h6 class="text-muted">Growth</h6>
+          <h3 class="text-warning fw-bold">+10%</h3>
+          <small class="text-muted">Stable trend</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📈 LAST QUARTER -->
+    <h2 class="mt-5">📆 Last Quarter Summary (July - September 2025)</h2>
+    <div class="row g-4 mt-1">
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h6 class="text-muted">Total Revenue</h6>
+          <h4 class="text-success fw-bold">Rp 345.800.000</h4>
+          <small class="text-muted">Up 9% QoQ</small>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h6 class="text-muted">Total Orders</h6>
+          <h4 class="text-primary fw-bold">5,276</h4>
+          <small class="text-muted">Avg 1,759/mo</small>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h6 class="text-muted">New Clients</h6>
+          <h4 class="text-info fw-bold">3,540</h4>
+          <small class="text-muted">+8% QoQ</small>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center p-3">
+          <h6 class="text-muted">Customer Retention</h6>
+          <h4 class="text-warning fw-bold">92%</h4>
+          <small class="text-muted">+3% improvement</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📈 REPORT SECTION -->
+    <h2 class="mt-5">🧾 Reports</h2>
+    <div class="table-responsive mt-3">
+      <table class="table table-hover table-bordered align-middle">
+        <thead class="table-dark text-center">
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Amount (Rp)</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td>01 Oct 2025</td>
+            <td>Sales</td>
+            <td>Laptop Acer Aspire 5</td>
+            <td>5.000.000</td>
+            <td><span class="badge bg-success">Completed</span></td>
+          </tr>
+          <tr>
+            <td>04 Oct 2025</td>
+            <td>Subscription</td>
+            <td>Premium Service</td>
+            <td>1.200.000</td>
+            <td><span class="badge bg-warning text-dark">Pending</span></td>
+          </tr>
+          <tr>
+            <td>15 Oct 2025</td>
+            <td>Refund</td>
+            <td>Order #8932</td>
+            <td>-300.000</td>
+            <td><span class="badge bg-danger">Refunded</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 🤝 INTEGRATION SECTION -->
+    <h2 class="mt-5">🔗 Integrations</h2>
+    <div class="row g-4 mt-1">
+      <div class="col-md-6">
+        <div class="card border-start border-4 border-success p-3">
+          <h5 class="text-success">Midtrans Payment</h5>
+          <p class="text-muted mb-2">Payment Gateway — Connected successfully</p>
+          <button class="btn btn-outline-success btn-sm">Manage</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card border-start border-4 border-info p-3">
+          <h5 class="text-info">HubSpot CRM</h5>
+          <p class="text-muted mb-2">Customer management — Connected</p>
+          <button class="btn btn-outline-info btn-sm">Manage</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📊 MINI CHART -->
+    <div class="mt-5 text-center">
+      <h4>Order Status Overview</h4>
+      <canvas id="ordersChart"></canvas>
+    </div>
+
+  </main>
+
+  <!-- JS -->
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('ordersChart');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Delivered', 'Pending', 'Refunded'],
+        datasets: [{
+          data: [15, 4, 1],
+          backgroundColor: ['#28a745', '#ffc107', '#dc3545']
+        }]
+      },
+      options: {
+        cutout: '70%',
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { boxWidth: 14 }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

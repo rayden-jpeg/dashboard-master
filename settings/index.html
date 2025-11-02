@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Settings</title>
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      border-radius: 10px;
+    }
+    .form-label {
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Dashboard</a>
+  </header>
+
+  <main class="container mt-4">
+    <h2>Settings</h2>
+    <p class="text-muted">Manage your profile, preferences, and system options.</p>
+
+    <div class="row mt-4 g-4">
+      <!-- 🟢 Profile Settings -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-primary text-white">Profile Settings</div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" value="Stefany Pricilia Randalembang">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" value="stefany@example.com">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control" value="Los Angeles, USA">
+              </div>
+              <button class="btn btn-primary w-100">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🟡 Notification Settings -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-warning">Notification Settings</div>
+          <div class="card-body">
+            <form>
+              <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" checked>
+                <label class="form-check-label">Email Notifications</label>
+              </div>
+              <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">SMS Alerts</label>
+              </div>
+              <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" checked>
+                <label class="form-check-label">System Updates</label>
+              </div>
+              <button class="btn btn-warning w-100">Update Preferences</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔵 Theme Settings -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-info text-white">Theme & Display</div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label class="form-label">Choose Theme</label>
+              <select class="form-select">
+                <option selected>Light Mode</option>
+                <option>Dark Mode</option>
+                <option>System Default</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Font Size</label>
+              <select class="form-select">
+                <option>Small</option>
+                <option selected>Medium</option>
+                <option>Large</option>
+              </select>
+            </div>
+            <button class="btn btn-info text-white w-100">Apply Theme</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔴 Security Settings -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-danger text-white">Security</div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Current Password</label>
+                <input type="password" class="form-control" placeholder="••••••••">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">New Password</label>
+                <input type="password" class="form-control" placeholder="••••••••">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Confirm New Password</label>
+                <input type="password" class="form-control" placeholder="••••••••">
+              </div>
+              <button class="btn btn-danger w-100">Change Password</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
